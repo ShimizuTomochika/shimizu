@@ -1,0 +1,309 @@
+@charset "UTF-8";
+
+html {
+	color: #000;
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset, img {
+	border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+caption, th {
+	text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before, q:after {
+	content: "";
+}
+
+abbr, acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: text-top;
+}
+
+sub {
+	vertical-align: text-bottom;
+}
+
+input, textarea, select, button {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	*font-size: 100%;
+}
+
+legend {
+	color: #000;
+}
+
+*::before, *::after {
+	box-sizing: border-box;
+}
+
+
+/* base */
+/* ---------------- */
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body {
+	line-height: 1.8;
+	line-height: 2;
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+hr {
+	margin: 10px;
+}
+
+.btn, a.btn, button.btn {
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 1.5;
+	position: relative;
+	display: inline-block;
+	padding: 1rem 4rem;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+	letter-spacing: 0.1em;
+	color: #212529;
+	border-radius: 0.5rem;
+}
+
+
+/* A001.jsp */
+/* ---------------- */
+#screen-size {
+	display: block;
+	width: 30%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.title {
+	margin-top: 20px;
+}
+
+.c-form-text {
+	height: 2em;
+	width: 80%;
+	margin: 20px 20px;
+	padding: 0 16px;
+	border-radius: 4px;
+	border: none;
+	box-shadow: 0 0 0 1px #ccc inset;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.c-form-text:focus {
+	outline: 0;
+	box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+
+.c-form-radio{
+    margin: 20px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.c-form-radio label {
+	margin: 0 30px;
+}
+
+.c-form-radio input {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.c-form-radio-name {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    color: #666;
+}
+
+.c-form-radio-name:before {
+    content: "";
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+.c-form-radio input:checked + .c-form-radio-name {
+    color: rgb(33, 150, 243);
+}
+
+.c-form-radio input:checked + .c-form-radio-name:before {
+    border: 0.35em solid rgb(33, 150, 243);
+}
+
+.c-form-radio input:focus-visible + .c-form-radio-name .c-form-radio-text {
+    background: linear-gradient(transparent 90%, rgba(33, 150, 243, 0.3) 90%);
+}
+
+#birthday {
+	display: flex;
+	justify-content: center;
+	margin-left: 8px;
+}
+
+#birthday label {
+	margin-right: 10px;
+	margin-left: 5px;
+}
+
+.c-form-select {
+    position: relative;
+}
+
+.c-form-select:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 12px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+    transform: rotate(135deg);
+    pointer-events: none;
+}
+
+.c-form-select select {
+    height: 2em;
+    width: 77px;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.c-form-select select::-ms-expand {
+    display: none;
+}
+
+.c-form-select select:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+
+.btn {
+	margin: 50px;
+}
+
+a.btn-radius-solid {
+	border: 1px solid #ccc;
+	background: #f1e767;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fdfbfb), to(#ebedee));
+	background: -webkit-linear-gradient(top, #fdfbfb 0%, #ebedee 100%);
+	background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+	-webkit-box-shadow: inset 1px 1px 1px #fff;
+	box-shadow: inset 1px 1px 1px #fff;
+}
+
+a.btn-radius-solid:hover {
+	background: -webkit-gradient(linear, left bottom, left top, from(#fdfbfb), to(#ebedee));
+	background: -webkit-linear-gradient(bottom, #fdfbfb 0%, #ebedee 100%);
+	background: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
+}
+
+/* B001.jsp */
+/* ---------------- */
+.result {
+	display:flex;
+	text-align: center;
+	margin: 0 auto;
+	flex-flow: column;
+}
+
+.wrap {
+	margin-top: 20px;
+	margin-left: 20px;
+	display: flex;
+}
+
+.wrap label {
+	margin-left: 50px;
+}
