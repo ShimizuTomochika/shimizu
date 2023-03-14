@@ -1,5 +1,5 @@
 package japanSub;
-あああ
+
 public class JapanBean {
 	
 	private String name;//都道府県名
